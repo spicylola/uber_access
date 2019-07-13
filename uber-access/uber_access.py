@@ -70,7 +70,7 @@ class UberAccess:
         profile = response.json
         email = profile.get('email')
         #THIS Is all a guess:
-        has_uber_profile = True if email is None else False
+        has_uber_profile = True if email is not None else False
         return has_uber_profile
 
 if __name__ == '__main__':
